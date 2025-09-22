@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visko - Разработчик</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #3498db;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .name {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        .about-text {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 14px 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid #d5dbdb;
+        }
+
+        .skill-item:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: #e8f4fd;
+            transform: translateX(5px);
+        }
+
+        .experience-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .experience-description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 35px;
+            background: #34495e;
+            color: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .telegram-icon {
+            width: 60px;
+            height: 60px;
+            margin: 20px auto;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .telegram-icon:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .telegram-icon::before {
+            content: '✈';
+            color: white;
+            font-size: 24px;
+        }
+
+        .contact-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="profile-photo">V</div>
+                <h1 class="name">Visko</h1>
+                <p class="title">Full Stack Developer</p>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h2 class="section-title">О себе</h2>
+                    <p class="about-text">Опытный разработчик с широкими навыками в области веб-разработки, мобильной разработки и серверных технологий. Специализируюсь на создании современных и эффективных решений.</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Навыки</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">Flutter</div>
+                        <div class="skill-item">Dart</div>
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">PHP</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">Firebase</div>
+                        <div class="skill-item">C#</div>
+                        <div class="skill-item">Python</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Опыт</h2>
+                    <div class="experience-item">
+                        <div class="experience-title">Mobile App Developer</div>
+                        <p class="experience-description">Разработка мобильных приложений на Flutter с интеграцией Firebase и современными пользовательскими интерфейсами.</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-title">Full Stack Web Developer</div>
+                        <p class="experience-description">Создание веб-приложений с использованием HTML5, CSS3, JavaScript, PHP и работа с базами данных.</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-title">Backend Developer</div>
+                        <p class="experience-description">Разработка серверных приложений на Java, C#, Python и проектирование баз данных.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Мои проекты</h3>
+                <p>Посмотрите все мои работы в Telegram группе</p>
+                <div class="telegram-icon" onclick="openTelegram()"></div>
+                <p>Кликните для перехода в группу</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTelegram() {
+            // Замените на ссылку вашей группы
+            window.open('https://t.me/your_group_name', '_blank');
+        }
+
+        // Простая анимация для навыков
+        document.querySelectorAll('.skill-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+        });
+    </script>
+</body>
+</html>
